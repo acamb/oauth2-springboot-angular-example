@@ -1,0 +1,12 @@
+server:
+  port: 8101
+  servlet:
+    context-path: /
+
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8100/auth/realms/test
+          jwk-set-uri: http://localhost:8100/auth/realms/test/protocol/openid-connect/certs
